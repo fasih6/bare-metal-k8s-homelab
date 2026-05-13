@@ -484,8 +484,6 @@ kubectl uncordon k3s-worker
 
 ## Phase 7 — Write a Helm Chart from Scratch (Week 4)
 
-Package everything into a reusable Helm chart. Do NOT copy an existing chart — write every file yourself.
-
 ### Step 16: Create Chart Skeleton
 
 ```bash
@@ -542,7 +540,6 @@ namespace: postgres
 
 ### `templates/_helpers.tpl`
 
-This is the file most candidates skip. Write it yourself — it defines reusable named templates that every other template file references.
 
 ```
 {{/*
