@@ -9,10 +9,10 @@ Built to close the gap between managed Kubernetes (EKS) and real bare metal oper
 ## Architecture
 
 ```
-                        ┌─────────────────────────────────────────┐
+                        ┌──────────────────────────────────────────┐
                         │              AWS VPC (172.31.0.0/16)     │
-                        │                                           │
-                        │  ┌─────────────────┐  ┌───────────────┐ │
+                        │                                          │
+                        │  ┌──────────────────┐  ┌───────────────┐ │
                         │  │   k3s-master     │  │  k3s-worker   │ │
                         │  │  172.31.84.x     │  │  172.31.88.x  │ │
                         │  │                  │  │               │ │
@@ -23,12 +23,12 @@ Built to close the gap between managed Kubernetes (EKS) and real bare metal oper
                         │  │  Longhorn mgr    │  │  Longhorn mgr │ │
                         │  │  Longhorn UI     │  │               │ │
                         │  │  PostgreSQL ──── │──│──► Volume     │ │
-                        │  └─────────────────┘  └───────────────┘ │
-                        │           │                    │          │
+                        │  └──────────────────┘  └───────────────┘ │
+                        │           │                    │         │
                         │      Flannel VXLAN (UDP 8472)            │
-                        │           │                    │          │
+                        │           │                    │         │
                         │      Longhorn iSCSI replication          │
-                        └─────────────────────────────────────────┘
+                        └──────────────────────────────────────────┘
 ```
 
 **Key design decisions:**
